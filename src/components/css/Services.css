@@ -1,0 +1,245 @@
+.services-scroll-wrapper {
+  position: relative;
+  width: 100%;
+  height: 370vh;
+}
+
+.services-sticky-content {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  padding: 100px 5%;
+  box-sizing: border-box;
+  color: #fff;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.services-sticky-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/imgs/Bg/about.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+  animation: SerwaveBg 25s ease-in-out infinite;
+}
+
+@keyframes SerwaveBg {
+  0% {
+    transform: scale(1.1) translate(0, 0);
+  }
+  20% {
+    transform: scale(1.12) translate(-1%, 1%);
+  }
+  40% {
+    transform: scale(1.13) translate(1%, -0.5%);
+  }
+  60% {
+    transform: scale(1.11) translate(-0.5%, -1%);
+  }
+  80% {
+    transform: scale(1.14) translate(0.5%, 1%);
+  }
+  100% {
+    transform: scale(1.1) translate(0, 0);
+  }
+}
+
+.services-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 1;
+}
+
+.services-header {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.service-title {
+  font-family: "TECHNIQUE-Light", sans-serif;
+  font-size: 29px;
+  font-weight: 900;
+  line-height: 1.3;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: #7f357e;
+}
+
+.service-desc {
+  color: #ffffff;
+  font-size: 13px;
+  margin-bottom: 20px;
+  max-width: 740px;
+  text-align: justify;
+  text-justify: inter-word;
+  text-align-last: center;
+  line-height: 1.6;
+}
+
+.desc-desktop {
+  display: block;
+}
+
+.desc-mobile {
+  display: none;
+}
+
+.services-container {
+  position: relative;
+  z-index: 2;
+  width: 80%;
+  height: 60vh;
+  margin: 0 auto;
+}
+
+.service-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transition: all 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+  opacity: 0;
+  transform: translateY(50px) scale(0.9);
+}
+
+.service-card.active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  z-index: 5;
+}
+
+.service-card.inactive {
+  opacity: 0;
+  transform: translateY(-50px) scale(0.95);
+  z-index: 1;
+}
+
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 1) 15%,
+    rgba(0, 0, 0, 0.7) 45%,
+    rgba(0, 0, 0, 0) 80%
+  );
+  z-index: 1;
+}
+
+.card-content {
+  position: relative;
+  z-index: 2;
+  text-align: left;
+  padding: 40px;
+  width: 55%;
+  color: #fff;
+}
+
+.card-title {
+  font-family: "TECHNIQUE-Light", sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.card-desc {
+  font-size: 11px;
+  line-height: 1.5;
+  max-width: 80%;
+}
+
+@media (max-width: 768px) {
+  .services-sticky-content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/imgs/Bg/Mobile/about.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+    animation: SerwaveBg 25s ease-in-out infinite;
+  }
+
+  .services-sticky-content {
+    height: 100vh;
+    padding: 80px 10%;
+  }
+
+  .services-container {
+    position: relative;
+    z-index: 2;
+    width: 99%;
+    height: 55vh;
+    margin: 0 auto;
+  }
+
+  .desc-desktop {
+    display: none;
+  }
+
+  .desc-mobile {
+    display: block;
+  }
+
+  .service-title {
+    font-size: 22px;
+  }
+
+  .card-content {
+    position: relative;
+    z-index: 2;
+    text-align: left;
+    padding: 40px;
+    width: 100%;
+    color: #fff;
+  }
+
+  .card-title {
+    font-size: 17px;
+  }
+
+  .card-desc {
+    font-size: 11px;
+    max-width: 100%;
+  }
+}

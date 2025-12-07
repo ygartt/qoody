@@ -1,0 +1,161 @@
+/* === BUTLER FONT FAMILY === */
+@font-face {
+  font-family: "Butler-Black";
+  src: url("./fonts/Butler_Black.otf") format("opentype");
+}
+
+/* === TECHNIQUE FONT FAMILY === */
+@font-face {
+  font-family: "TECHNIQUE";
+  src: url("./fonts/TECHNIQUE.otf") format("opentype");
+}
+/* === TECHNIQUE-Light FONT FAMILY === */
+@font-face {
+  font-family: "TECHNIQUE-Light";
+  src: url("./fonts/TECHNIQUE-Light.otf") format("opentype");
+}
+
+/*====== Gill Sans =====*/
+@font-face {
+  font-family: "Gill Sans";
+  src: url("./fonts/Gill Sans.otf") format("opentype");
+}
+@font-face {
+  font-family: "Butler-Bold";
+  src: url("./fonts/Butler_Bold.otf") format("opentype");
+}
+@font-face {
+  font-family: "Butler-ExtraBold";
+  src: url("./fonts/Butler_ExtraBold.otf") format("opentype");
+}
+@font-face {
+  font-family: "Butler-Light";
+  src: url("./fonts/Butler_Light.otf") format("opentype");
+}
+@font-face {
+  font-family: "Butler-Medium";
+  src: url("./fonts/Butler_Medium.otf") format("opentype");
+}
+@font-face {
+  font-family: "Butler-Regular";
+  src: url("./fonts/Butler_Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: "Butler-UltraLight";
+  src: url("./fonts/Butler_Ultra_Light.otf") format("opentype");
+}
+
+/* === CANIS MAJOR === */
+@font-face {
+  font-family: "CanisMajor";
+  src: url("./assets/fonts/CANIS-MAJOR.ttf") format("truetype");
+}
+
+/* === Movie Makers Personal Use === */
+@font-face {
+  font-family: "MovieMakersPersonalUse";
+  src: url("./assets/fonts/MovieMakersPersonalUse.ttf") format("truetype");
+}
+
+/* === CINZEL FAMILY === */
+@font-face {
+  font-family: "Cinzel-Black";
+  src: url("./assets/fonts/Cinzel-Black.otf") format("opentype");
+}
+@font-face {
+  font-family: "Cinzel-Bold";
+  src: url("./assets/fonts/Cinzel-Bold.otf") format("opentype");
+}
+@font-face {
+  font-family: "Cinzel-Regular";
+  src: url("./assets/fonts/Cinzel-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: "CinzelDecorative-Black";
+  src: url("./assets/fonts/CinzelDecorative-Black.otf") format("opentype");
+}
+@font-face {
+  font-family: "CinzelDecorative-Bold";
+  src: url("./assets/fonts/CinzelDecorative-Bold.otf") format("opentype");
+}
+@font-face {
+  font-family: "CinzelDecorative-Regular";
+  src: url("./assets/fonts/CinzelDecorative-Regular.otf") format("opentype");
+}
+
+/* === GILL SANS CONDENSED === */
+@font-face {
+  font-family: "GillSansCondensed";
+  src: url("./assets/fonts/gill-sans-mt-condensed.ttf") format("truetype");
+}
+
+/* === HERTINE === */
+@font-face {
+  font-family: "Hertine";
+  src: url("./assets/fonts/Hertine.woff") format("woff"),
+    url("./assets/fonts/Hertine.ttf") format("truetype");
+}
+
+/* === MISTRAL === */
+@font-face {
+  font-family: "Mistral";
+  src: url("./assets/fonts/MISTRAL.ttf") format("truetype");
+}
+
+/* === MOVIE FILMSTRIP === */
+@font-face {
+  font-family: "MovieFilmstrip";
+  src: url("./assets/fonts/Movie.woff") format("woff"),
+    url("./assets/fonts/Movie.ttf") format("truetype");
+}
+
+/* === BlackMatcha === */
+@font-face {
+  font-family: "BlackMatcha";
+  src: url("./assets/fonts/Black-Matcha.otf") format("opentype");
+}
+
+/* === BAUHS93 === */
+@font-face {
+  font-family: "BAUHS93";
+  src: url("./assets/fonts/BAUHS93.ttf") format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* html {
+  scroll-behavior: smooth;
+} */
+
+body {
+  background-color: #d05aff;
+  color: #ffffff;
+  overflow-x: hidden;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d05aff;
+}
