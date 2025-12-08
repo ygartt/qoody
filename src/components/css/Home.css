@@ -149,9 +149,9 @@
 }
 
 .btn-primary:hover {
-  background-color: transparent;
-  border-color: #7f357e;
-  color: #7f357e;
+  background-color: black;
+  border-color: #000;
+  color: #ffffff;
   transform: translateY(-3px);
 }
 
