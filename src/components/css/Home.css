@@ -233,7 +233,7 @@
     top: auto !important;
     bottom: 0 !important;
     left: 50% !important;
-    transform: translateX(-50%) !important;
+    /* transform: translateX(-50%) !important; <--- MESSE7 HAD STAR, GSAP GHAYTKELEF BIHA */
     object-fit: contain !important;
     object-position: bottom center !important;
     z-index: -2 !important;

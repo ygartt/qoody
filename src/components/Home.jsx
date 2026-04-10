@@ -38,26 +38,54 @@ const Home = () => {
 
   useGSAP(
     () => {
-      gsap.set(bgPicsRef.current, {
-        xPercent: -50,
-        yPercent: -50,
-        x: 0,
-        y: 0,
-        rotation: 0,
+      let mm = gsap.matchMedia();
+
+      // === VERSION PC ===
+      mm.add("(min-width: 769px)", () => {
+        gsap.set(bgPicsRef.current, {
+          xPercent: -50,
+          yPercent: -50, // F PC katji f l'wst dyal l'ecran
+          x: 0,
+          y: 0,
+          rotation: 0,
+        });
+
+        gsap.to(bgPicsRef.current, {
+          keyframes: [
+            { y: 15, x: -10, rotation: -1, duration: 4, ease: "sine.inOut" },
+            { y: -15, x: 10, rotation: 1, duration: 4, ease: "sine.inOut" },
+            { y: -5, x: 5, rotation: 0.5, duration: 4, ease: "sine.inOut" },
+            { y: 0, x: 0, rotation: 0, duration: 4, ease: "sine.inOut" },
+          ],
+          repeat: -1,
+        });
       });
 
-      gsap.to(bgPicsRef.current, {
-        keyframes: [
-          { y: 15, x: -10, rotation: -1, duration: 4, ease: "sine.inOut" },
-          { y: -15, x: 10, rotation: 1, duration: 4, ease: "sine.inOut" },
-          { y: -5, x: 5, rotation: 0.5, duration: 4, ease: "sine.inOut" },
-          { y: 0, x: 0, rotation: 0, duration: 4, ease: "sine.inOut" },
-        ],
-        repeat: -1,
+      // === VERSION MOBILE ===
+      mm.add("(max-width: 768px)", () => {
+        gsap.set(bgPicsRef.current, {
+          xPercent: -50, // GSAP kay-centryha f blast CSS
+          yPercent: 0, // Katb9a las9a f l'bottom (0)
+          x: 0,
+          y: 0,
+          rotation: 0,
+        });
+
+        gsap.to(bgPicsRef.current, {
+          keyframes: [
+            { y: 10, x: -5, rotation: -1, duration: 4, ease: "sine.inOut" },
+            { y: -10, x: 5, rotation: 1, duration: 4, ease: "sine.inOut" },
+            { y: -5, x: 3, rotation: 0.5, duration: 4, ease: "sine.inOut" },
+            { y: 0, x: 0, rotation: 0, duration: 4, ease: "sine.inOut" },
+          ],
+          repeat: -1,
+        });
       });
 
       gsap.set(".hero-anim-down", { y: -50, opacity: 0 });
       gsap.set(".hero-anim-up", { y: 50, opacity: 0 });
+
+      return () => mm.revert();
     },
     { scope: containerRef },
   );
