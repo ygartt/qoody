@@ -1,0 +1,77 @@
+@font-face {
+  font-family: "texar";
+  src: url("/fonts/texar.otf") format("opentype");
+}
+@font-face {
+  font-family: "texar-light";
+  src: url("/fonts/texar-light.otf") format("opentype");
+}
+@font-face {
+  font-family: "texar-bold";
+  src: url("/fonts/texar-bold.otf") format("opentype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* html {
+  scroll-behavior: smooth;
+} */
+
+.sticky-home {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  z-index: 1;
+}
+
+#about,
+#services,
+#whyus,
+#contact {
+  position: relative;
+  z-index: 2;
+  background-color: #050505;
+}
+
+::selection {
+  background-color: #7f357e;
+  color: #ffffff;
+}
+
+::-moz-selection {
+  background-color: #7f357e;
+  color: #ffffff;
+}
+
+body {
+  background-color: #d05aff;
+  color: #ffffff;
+  overflow-x: hidden;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d05aff;
+}

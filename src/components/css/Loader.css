@@ -1,0 +1,114 @@
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #050505;
+  z-index: 99999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: transform 1s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.loader-container.slide-up {
+  transform: translateY(-100vh);
+}
+
+.loader-bg-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 30px 30px;
+  z-index: 1;
+}
+
+.loader-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60vw;
+  height: 60vw;
+  background: radial-gradient(
+    circle,
+    rgba(127, 53, 126, 0.3) 0%,
+    rgba(127, 53, 126, 0) 70%
+  );
+  filter: blur(100px);
+  z-index: 2;
+  animation: pulseGlow 2s infinite alternate;
+}
+
+@keyframes pulseGlow {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+}
+
+.loader-content {
+  position: relative;
+  z-index: 3;
+  width: 60%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.loader-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.loader-logo {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+.loader-number {
+  font-family: "texar-light", sans-serif;
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.loader-progress-wrapper {
+  width: 100%;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.loader-progress-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #7f357e;
+  box-shadow: 0 0 15px #7f357e;
+  transition: width 0.15s ease-out;
+}
+
+@media (max-width: 768px) {
+  .loader-content {
+    width: 80%;
+  }
+  .loader-logo {
+    height: 30px;
+  }
+}
