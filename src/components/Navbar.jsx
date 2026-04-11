@@ -10,13 +10,13 @@ const Navbar = () => {
     e.preventDefault();
     setActiveLink(targetId);
     setIsMenuOpen(false);
-    document.body.style.overflow = "auto";
+    document.body.style.overflow = "";
     smoothScrollTo(targetId, 1500);
   };
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
-    document.body.style.overflow = !isMenuOpen ? "hidden" : "auto";
+    document.body.style.overflow = !isMenuOpen ? "hidden" : "";
   };
 
   useEffect(() => {
