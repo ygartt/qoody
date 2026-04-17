@@ -45,18 +45,6 @@ const Services = () => {
 
   useGSAP(
     () => {
-      gsap.from(".services-marquee-wrapper", {
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top 85%",
-          toggleActions: "play reverse play reverse",
-        },
-        y: 80,
-        opacity: 0,
-        duration: 1.2,
-        ease: "power4.out",
-      });
-
       const rows = gsap.utils.toArray(".service-card-row");
 
       rows.forEach((row) => {
