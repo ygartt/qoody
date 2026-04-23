@@ -100,6 +100,17 @@
   text-transform: uppercase;
 }
 
+#y {
+  font-family: "texar", sans-serif;
+  font-size: 50px;
+  color: #ffffff;
+  -webkit-text-stroke: 2px #ffffff;
+  line-height: 1.3;
+  width: 73%;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
 .title-row {
   display: inline-flex;
   align-items: center;
@@ -195,6 +206,12 @@
     width: 90%;
   }
 
+  #y {
+    font-size: 40px;
+    color: #ffffff;
+    -webkit-text-stroke: 2px #ffffff;
+  }
+
   .title-icon {
     height: 40px;
   }
@@ -248,7 +265,10 @@
     width: 100%;
     margin-top: 40px;
   }
-
+  #y {
+    font-size: 22px;
+    -webkit-text-stroke: 1px #ffffff;
+  }
   .title-icon {
     height: 25px;
   }

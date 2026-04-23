@@ -64,8 +64,8 @@ const Home = () => {
       // === VERSION MOBILE ===
       mm.add("(max-width: 768px)", () => {
         gsap.set(bgPicsRef.current, {
-          xPercent: -50, // GSAP kay-centryha f blast CSS
-          yPercent: 0, // Katb9a las9a f l'bottom (0)
+          xPercent: -50,
+          yPercent: 0,
           x: 0,
           y: 0,
           rotation: 0,
@@ -189,7 +189,7 @@ const Home = () => {
         ))}
 
         <h1 className="main-title hero-anim-down">
-          Every idea{" "}
+          Ever<span id="y">y</span> idea{" "}
           <span className="title-row">
             <img src="/imgs/idea.png" alt="Idea" className="title-icon" />
           </span>{" "}
