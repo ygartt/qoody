@@ -1,3 +1,10 @@
+.about-pic,
+.about-title,
+.founder-card {
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+}
+
 .about-container {
   position: relative;
   width: 100vw;

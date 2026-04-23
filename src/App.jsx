@@ -8,6 +8,7 @@ import Contact from "./components/Contact";
 import CustomCursor from "./components/CustomCursor";
 import Loader from "./components/Loader";
 import "./App.css";
+import SmoothScroll from "./components/SmoothScroll";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -15,7 +16,7 @@ function App() {
   return (
     <div>
       {isLoading && <Loader onComplete={() => setIsLoading(false)} />}
-
+      <SmoothScroll />
       <CustomCursor />
       <Navbar />
 

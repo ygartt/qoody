@@ -13,9 +13,12 @@ const Services = () => {
   const [currentImgIndex, setCurrentImgIndex] = useState(0);
 
   const graphicImages = [
-    "/imgs/services/2.jpg",
-    "/imgs/services/3.jpg",
-    "/imgs/services/4.jpg",
+    "/imgs/portfolio/1.jpg",
+    "/imgs/portfolio/2.jpg",
+    "/imgs/portfolio/3.jpg",
+    "/imgs/portfolio/4.jpg",
+    "/imgs/portfolio/5.jpg",
+    "/imgs/portfolio/6.jpg",
   ];
 
   useEffect(() => {
@@ -38,7 +41,7 @@ const Services = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImgIndex((prevIndex) => (prevIndex + 1) % graphicImages.length);
-    }, 2777);
+    }, 2000);
 
     return () => clearInterval(interval);
   }, [graphicImages.length]);
@@ -49,7 +52,6 @@ const Services = () => {
 
       rows.forEach((row) => {
         const isReverse = row.classList.contains("reverse");
-        const leftEl = row.querySelector(".service-card-left");
         const rightEl = row.querySelector(".service-card-right");
 
         const tl = gsap.timeline({
@@ -60,25 +62,13 @@ const Services = () => {
           },
         });
 
-        tl.from(
-          leftEl,
-          {
-            x: isReverse ? 150 : -150,
-            opacity: 0,
-            duration: 1.5,
-            ease: "power4.out",
-          },
-          0,
-        ).from(
-          rightEl,
-          {
-            x: isReverse ? -150 : 150,
-            opacity: 0,
-            duration: 1.5,
-            ease: "power4.out",
-          },
-          0.15,
-        );
+        tl.from(rightEl, {
+          x: isReverse ? -150 : 150,
+          opacity: 0,
+          duration: 1.5,
+          ease: "power4.out",
+          force3D: true,
+        });
       });
     },
     { scope: containerRef },
@@ -141,13 +131,13 @@ const Services = () => {
           <div className="service-card-left">
             <div
               className="scroll-img-wrapper"
-              style={{ position: "relative" }}
+              style={{ position: "relative", overflow: "hidden" }}
             >
               {graphicImages.map((imgSrc, index) => (
                 <img
                   key={index}
                   src={imgSrc}
-                  alt={`Graphic Design Preview ${index + 1}`}
+                  alt={`Portfolio Design ${index + 1}`}
                   className="scrolling-img"
                   style={{
                     position: "absolute",
@@ -155,10 +145,17 @@ const Services = () => {
                     left: 0,
                     width: "100%",
                     height: "100%",
-                    objectFit: "cover",
+                    // objectFit: "cover",
                     opacity: index === currentImgIndex ? 1 : 0,
-                    transition: "opacity 1.5s ease-in-out",
+                    transform:
+                      index === currentImgIndex
+                        ? "scale(1) translateY(0)"
+                        : "scale(1.1) translateY(20px)",
+                    transition:
+                      "opacity 1s ease-in-out, transform 1.2s cubic-bezier(0.25, 1, 0.5, 1)",
                     pointerEvents: index === currentImgIndex ? "auto" : "none",
+                    willChange: "transform, opacity",
+                    backfaceVisibility: "hidden",
                   }}
                 />
               ))}
@@ -166,7 +163,7 @@ const Services = () => {
           </div>
           <div className="service-card-right">
             <h3 className="service-card-title-main">
-              VISUAL IDENTITY & DESIGN
+              BRANDING & GRAPHIC DESIGN
             </h3>
             <h4 className="service-card-subtitle">
               LOGO DESIGN / BRAND GUIDELINES / DIGITAL ART / PRINT DESIGN

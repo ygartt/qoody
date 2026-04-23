@@ -14,42 +14,41 @@ const About = () => {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: containerRef.current,
-          start: "30% 70%",
+          start: "top 80%",
           toggleActions: "play reverse play reverse",
         },
       });
 
-      tl.from(
-        ".about-pic",
-        {
-          x: -100,
-          opacity: 0,
-          scale: 0.85,
-          duration: 1.9,
-          ease: "power4.out",
-        },
-        0,
-      )
+      tl.from(".about-pic", {
+        x: -60,
+        opacity: 0,
+        scale: 0.9,
+        duration: 1.2,
+        ease: "power3.out",
+        force3D: true,
+      })
         .from(
           ".about-title",
           {
-            y: -60,
+            y: -40,
             opacity: 0,
-            duration: 1.9,
-            ease: "power4.out",
+            duration: 1,
+            ease: "power3.out",
+            force3D: true,
           },
-          0,
+          "-=0.8",
         )
         .from(
           ".founder-card",
           {
-            x: 100,
+            y: 40,
             opacity: 0,
-            duration: 1.9,
-            stagger: 0.25,
-            ease: "power4.out",
+            duration: 1,
+            stagger: 0.2,
+            ease: "power3.out",
+            force3D: true,
           },
-          0.15,
+          "-=0.6",
         );
     },
     { scope: containerRef },

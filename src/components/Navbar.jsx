@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./css/Navbar.css";
 import { smoothScrollTo } from "./AnimationScroll";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Navbar = () => {
   const [activeLink, setActiveLink] = useState("#home");
@@ -11,7 +15,16 @@ const Navbar = () => {
     setActiveLink(targetId);
     setIsMenuOpen(false);
     document.body.style.overflow = "";
-    smoothScrollTo(targetId, 1500);
+
+    const allTriggers = ScrollTrigger.getAll();
+    allTriggers.forEach((trigger) => trigger.disable(false));
+
+    smoothScrollTo(targetId, 800);
+
+    setTimeout(() => {
+      allTriggers.forEach((trigger) => trigger.enable());
+      ScrollTrigger.refresh();
+    }, 850);
   };
 
   const toggleMenu = () => {
