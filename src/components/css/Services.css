@@ -162,6 +162,11 @@
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
+  .services-container {
+    width: 95%;
+    padding: 5% 0;
+  }
+
   .services-title {
     font-size: 30px;
   }
@@ -202,7 +207,7 @@
 
   .service-card-left {
     width: 90%;
-    height: 40vh;
+    height: 30vh;
     margin: 0 auto;
   }
 
@@ -220,6 +225,19 @@
   .service-card-right {
     width: 90%;
     margin: 0 auto;
+  }
+
+  .service-card-title-main {
+    color: #7f357e;
+    font-size: 15px;
+  }
+
+  .service-card-subtitle {
+    display: none;
+  }
+
+  .service-card-desc {
+    font-size: 10px;
   }
 
   .service-card-row:nth-child(odd) .service-card-right {
