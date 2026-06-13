@@ -13,12 +13,12 @@ const Services = () => {
   const [currentImgIndex, setCurrentImgIndex] = useState(0);
 
   const graphicImages = [
-    "/imgs/portfolio/1.jpg",
-    "/imgs/portfolio/2.jpg",
-    "/imgs/portfolio/3.jpg",
-    "/imgs/portfolio/4.jpg",
-    "/imgs/portfolio/5.jpg",
-    "/imgs/portfolio/6.jpg",
+    "/imgs/portfolio/1.webp",
+    "/imgs/portfolio/2.webp",
+    "/imgs/portfolio/3.webp",
+    "/imgs/portfolio/4.webp",
+    "/imgs/portfolio/5.webp",
+    "/imgs/portfolio/6.webp",
   ];
 
   useEffect(() => {
@@ -106,7 +106,7 @@ const Services = () => {
               className={`scroll-img-wrapper ${startScroll ? "active-scroll" : ""}`}
             >
               <img
-                src="/imgs/services/00.png"
+                src="/imgs/services/00.webp"
                 alt="Web Development Preview"
                 className="scrolling-img"
               />

@@ -14,7 +14,7 @@ const Home = () => {
   const [introDone, setIntroDone] = useState(false);
   const isFirstLoad = useRef(true);
 
-  const bgImages = ["/imgs/BG-home1.png", "/imgs/BG-home2.png"];
+  const bgImages = ["/imgs/BG-home1.webp", "/imgs/BG-home2.webp"];
 
   useEffect(() => {
     const handleIntro = () => setIntroDone(true);

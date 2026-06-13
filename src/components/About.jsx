@@ -59,7 +59,7 @@ const About = () => {
       <div className="about-bg-grid"></div>
 
       <div className="about-content">
-        <img src="/imgs/YGMT.jpg" alt="YGMT" className="about-pic" />
+        <img src="/imgs/YGMT.webp" alt="YGMT" className="about-pic" />
         <h1 className="about-title">Founders</h1>
       </div>
 

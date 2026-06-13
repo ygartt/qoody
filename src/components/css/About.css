@@ -130,7 +130,7 @@
   border-bottom: 1px solid #7f357e;
 }
 
-@media (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1024px) {
   .about-container {
     padding-top: 5vh;
     justify-content: flex-start;
@@ -149,6 +149,10 @@
     text-align: center;
     z-index: 10;
     margin-top: 5vh;
+    width: 90%;
+    font-size: 14vw;
+    line-height: 1;
+    margin-bottom: -5vw;
   }
 
   .about-pic {
@@ -156,9 +160,9 @@
     order: 2;
     top: auto;
     left: auto;
-    width: 90%;
+    width: 80%;
     height: auto;
-    margin: 0;
+    margin: 0 auto 5%;
     object-fit: contain;
     transform: none;
     display: block;
@@ -203,18 +207,6 @@
   .founder-desc {
     display: none;
   }
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-  .about-title {
-    font-size: 100px;
-    margin-bottom: -60px;
-  }
-
-  .about-pic {
-    width: 80%;
-    margin-bottom: 5%;
-  }
 
   .founder-name {
     font-size: 32px;
@@ -226,8 +218,90 @@
 }
 
 @media (max-width: 768px) {
+  .about-container {
+    padding-top: 5vh;
+    padding: 3%;
+    justify-content: flex-start;
+    overflow-y: auto;
+  }
+
+  .about-content {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 0;
+  }
+
   .about-title {
-    font-size: 60px;
-    margin-bottom: -40px;
+    order: 1;
+    position: relative;
+    text-align: center;
+    z-index: 10;
+    margin-top: 5vh;
+    width: 100%;
+    font-weight: 100;
+    font-size: 13vw;
+    line-height: 1;
+    margin-bottom: -7vw;
+  }
+
+  .founder-name {
+    font-size: 15px;
+  }
+
+  .founder-role {
+    font-size: 13px;
+  }
+
+  .about-pic {
+    position: relative;
+    order: 2;
+    top: auto;
+    left: auto;
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    object-fit: contain;
+    transform: none;
+    display: block;
+    z-index: 5;
+  }
+
+  .founders-cards-container {
+    order: 3;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 60px;
+    gap: 40px;
+  }
+
+  .founder-card {
+    width: 90%;
+  }
+
+  .founder-card:nth-child(1) {
+    align-self: flex-start;
+    align-items: flex-start;
+    padding-left: 5%;
+  }
+
+  .founder-card:nth-child(1) .founder-name,
+  .founder-card:nth-child(1) .founder-role {
+    text-align: left;
+  }
+
+  .founder-card:nth-child(2) {
+    align-self: flex-end;
+    align-items: flex-end;
+    padding-right: 5%;
+  }
+
+  .founder-card:nth-child(2) .founder-name,
+  .founder-card:nth-child(2) .founder-role {
+    text-align: right;
+  }
+
+  .founder-desc {
+    display: none;
   }
 }
